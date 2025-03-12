@@ -10,7 +10,7 @@ const SensorGraph = ({ sensorIndex, sensorName }) => {
   const [sensorData, setSensorData] = useState([]);
 
   useEffect(() => {
-    const newSocket = io("http://localhost:5000");
+    const newSocket = io("https://sanrachna-backend.vercel.app/");
 
     newSocket.on("sensorUpdate", (newData) => {
       const sensorValue = newData[`sensor_${sensorIndex + 1}`];
