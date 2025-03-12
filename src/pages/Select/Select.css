@@ -1,0 +1,171 @@
+.select {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 6%;
+}
+
+.select .select-sensor {
+    margin-right: 5%;
+    flex: 1; /* Ensures equal space distribution */
+}
+
+.back-button-container{
+    margin: 2% 5%;
+}
+
+.back-button{
+    padding: 7px 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    /* background: rgb(3, 24, 40); */
+    background-color: #3333334e;
+    cursor: pointer;
+}
+
+.select-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 10%;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    gap: 20px; /* Provides spacing between elements */
+}
+
+.select-data{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-data div{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    padding: 10px 5px;
+    margin: 5px;
+    background-color: #3333334e;
+    border: 1px solid #333333;
+    border-radius: 5px;
+}
+.select-sensor{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.select select {
+    width: 100%; /* Prevents overflow issues */
+    max-width: 150px; /* Limits excessive stretching */
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.select .graph {
+    width: 50%;
+    min-height: 350px; /* Prevents collapsing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    background-color: #f8f8f8; /* Light background for contrast */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.select .deactive-graph{
+    color: black;
+    background-color: #33333311;
+}
+
+.select .deactive-graph h1{
+    font-size: 16px;
+}
+
+.active-deactive button{
+    padding: 10px;
+    margin: auto;
+    background-color: #3333334e;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.active-deactive .active{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.active-deactive .deactive{
+    background-color: #f44336;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .select {
+        padding: 5% 5%;
+    }
+
+    .select-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .select .graph {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .select .select-sensor {
+        width: 100%;
+    }
+
+    .select select {
+        max-width: 100%;
+    }
+
+    .select-data {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Makes items responsive */
+    }
+
+    .select-data div {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .select select {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .back-button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .select .graph {
+        min-height: 250px;
+        padding: 0px;
+    }
+
+    .select-data {
+        padding: 10px;
+        gap: 10px;
+    }
+}

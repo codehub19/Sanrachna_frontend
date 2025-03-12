@@ -1,0 +1,20 @@
+.sensor-graph {
+    width: 100%; /* Makes it flexible */
+    max-width: 600px; /* Prevents it from becoming too large */
+    margin: auto; /* Centers it */
+}
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+    .sensor-graph {
+        max-width: 100%; /* Reduces width slightly for better fit */
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+    .sensor-graph {
+        max-width: 350px; /* Uses full width on small screens */
+        padding: 0px; /* Adds some spacing */
+    }
+}
